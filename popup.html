@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUp</title>
+    <link rel="stylesheet" href="popup_style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="btn">&#8592; Back</a>
+        <input type="button" value="Confirm Order" class="btn" onclick="openPopup()">
+        <div class="popup" id="popup">
+            <img src="images/tick2.png" alt="Tick">
+            <h2>Order Placed !</h2>
+            <p>Hurray!! Thank you for shopping. Your order is on the way.</p>
+            <a href="index.html"><input type="button" value="Continue Shopping" id="ok" onclick="closePopup()"></a>
+        </div>
+    </div>
+    <script>
+        let popup = document.getElementById("popup");
+        function openPopup(){
+           popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+         }
+    </script>
+</body>
+</html>

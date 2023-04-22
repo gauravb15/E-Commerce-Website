@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GB-Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    
+</head>
+<body>
+       
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="gb.png" alt="logo">
+                    </a>
+                </div>
+                <nav>
+                    <ul id="menu-items">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="allproducts.html">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <div class="cart-menu">
+                    <!-- <img src="images/cart-icon.png" alt="img" class="cart-icon" height="30px" width="30px"> -->
+                    <img src="images/menu-icon.png" alt="img" class="menu-icon" onclick="MenuToggle()">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Take Your Fashion To<br>The Next Level!</h1>
+                    <p>Explore the latest and trending fashion arrivals <br> and take your style to the next level. </p>
+                    <a href="allproducts.html" class="btn">Explore Now &#8594;</a>
+    
+                </div>
+                <div class="col-2">
+                    <img src="images/bg-main3.png" alt="background-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <!--  Featured Categories-->
+    <div class="categories">
+        <div class="small-container">
+            <h2 class="title">Top categories</h2>
+            <div class="row">
+                <div class="col-3">
+                    <a href="clothing.html">
+                        <img src="images/Clothing.jpg" alt="Clothing">
+                        <h4>Clothing</h4>
+                    </a>
+                </div>
+
+            
+                <div class="col-3">
+                    <a href="footwear.html">
+                        <img src="images/Footwear.jpg" alt="Footwear">
+                        <h4>Footwear</h4>
+                    </a>
+                </div>
+            
+                <div class="col-3">
+                    <a href="eyewear.html">
+                        <img src="images/Eyewear-1.jpg" alt="Eyewear">
+                        <h4>Eyewear</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products  -->
+    <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="clothing-1.html">
+                    <img src="product_images/c-1-m-1.webp" alt="lenskart bb">
+                    <h4>Men Solid Quilted Jacket</h4>
+                </a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>Rs. 1299</p>
+            </div>
+            <div class="col-4">
+                <a href="footwear-1.html">
+                    <img src="product_images/f-1-1.webp" alt="tss-hp">
+                    <h4>Men Black Sports Sandal </h4>
+                </a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>Rs. 1299</p>
+            </div>
+            <div class="col-4">
+                <a href="eyewear-2.html">
+                <img src="product_images/e-2-1.jpg" alt="sunglass">
+                <h4> Cat Eye Eyeglasses</h4>
+                </a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>Rs. 1599</p>
+            </div>
+            <div class="col-4">
+                <a href="clothing-2.html">
+                    <img src="product_images/c-2-m-1.webp" alt="nike-air">
+                    <h4>Drop Cut T-Shirts</h4>
+                </a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>Rs. 699</p>
+            </div>
+        </div>
+    </div>
+
+    <!--  New Arrivals-->
+    <!-- Offer -->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2" id="offer-img">
+                    <img src="images/o-noise.png" alt="offer">
+                </div>
+                <div class="col-2" id="offer-desc">
+                    <p>Exclusively Available on GB-Store</p><br>
+                    <h1>Noise ColorFit Pulse 2</h1>
+                    <p>Rs. 1999 Only</p><br>
+                    <p>Noise ColorFit Pulse 2: 1.8" Biggest Display Smart Watch, 550 NITS Brightness, <br> Sleek Metallic Body, HR, Sleep & <br> Spo2 Monitoring, Upto 10 Days Battery Life, Calls & <br> SMS Reply - Rose Pink </p>
+                    <a href="cart.html" class="btn">Buy Now &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Testimonials  -->
+
+    <div class="testimonial">
+        <h2 class="title">Our Testimonials</h2>
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ab ipsam distinctio quibusdam iure vitae consectetur, a in sit ipsa?</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <img src="images/tm-user1.jpg" alt="image" class="tm-img">
+                    <h3>John Doe</h3>
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="col-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ab ipsam distinctio quibusdam iure vitae consectetur, a in sit ipsa?</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <img src="images/tm-user3.jpg" alt="image" class="tm-img">
+                    <h3>Lila Banner</h3>
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="col-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ab ipsam distinctio quibusdam iure vitae consectetur, a in sit ipsa?</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <img src="images/tm-user2.jpg" alt="image" class="tm-img">
+                    <h3>Mike Tyson</h3>
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------Brands---------- -->
+    <div class="brands">
+        <h2 class="title">Featured Brands</h2>
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="images/br-tss.png" alt="image">
+                </div>
+                <div class="col-5">
+                    <img src="images/br-nike.png" alt="image">
+                </div>
+                <div class="col-5">
+                    <img src="images/br-rayban.png" alt="image">
+                </div>
+                <div class="col-5">
+                    <img src="images/br-puma.png" alt="image">
+                </div>
+                <div class="col-5">
+                    <img src="images/br-raymond.png" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ------Footer------ -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download the app for Android and ios mobile.</p><br>
+                    <div class="app-logo">
+                        <img src="images/footer-playstore.png" alt="image">
+                        <img src="images/footer-appstore.png" alt="image">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="gb.png" alt="logo">
+                    <p>Aiming to provide best fashion <br> experiences to all at most <br> affordable prices from top brands</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>FAQs</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>You Tube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&#169; Copyright 2022 @ GB-Store. <br> All rights are reserved.</p>
+        </div>
+    </div>
+
+
+    <!-- JS for toggle menu -->
+    <script>
+        var menuItems = document.getElementById("menu-items");
+
+        menuItems.style.maxHeight = "0px";
+
+        function MenuToggle(){
+            if( menuItems.style.maxHeight == "0px"){
+                menuItems.style.maxHeight = "200px";
+            }
+            else{
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+</body>
+</html>

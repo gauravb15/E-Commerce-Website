@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GB-Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <div class="header" style="background: #fff;">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="gb.png" alt="logo">
+                </div>
+                <nav>
+                    <ul id="menu-items">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="allproducts.html">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <div class="cart-menu">
+                    <!-- <img src="images/cart-icon.png" alt="img" class="cart-icon" height="30px" width="30px"> -->
+                    <img src="images/menu-icon.png" alt="img" class="menu-icon" onclick="MenuToggle()">
+                </div>
+            </div>   
+        </div>
+    </div>
+
+    <!-- ------ Account ------ -->
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/bg-main3.png" alt="img" width="100%">
+                </div>
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="indicator">
+                    </div>
+                    <form id="login-form" name="submit-to-google-sheet">
+                        <input type="text" placeholder="Username" name="username">
+                        <input type="password" name="password" id="" placeholder="Password">
+                        <a href="allproducts.html"><button type="submit" class="btn">Login</button></a>
+                        <a href="">Forgot Password ?</a>
+                    </form>
+                    <form id="register-form" name="submit-to-register-form">
+                        <input type="text" placeholder="Username" name="username">
+                        <input type="email" placeholder="Email" name="email" required>
+                        <input type="password" id="" placeholder="Password" name="password" required>
+                        <a href="allproducts.html">
+                            <div>
+                                <button type="submit" class="btn">Register</button>
+                            </div>
+                        </a>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------Footer------ -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download the app for Android and ios mobile.</p><br>
+                    <div class="app-logo">
+                        <img src="images/footer-playstore.png" alt="image">
+                        <img src="images/footer-appstore.png" alt="image">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="gb.png" alt="logo">
+                    <p>Aiming to provide best fashion <br> experiences to all at most <br> affordable prices from top brands</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>FAQs</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>You Tube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&#169; Copyright 2022 @ GB-Store. <br> All rights are reserved.</p>
+        </div>
+    </div>
+
+
+
+    <!-- JS for toggle menu -->
+    <script>
+        var menuItems = document.getElementById("menu-items");
+
+        menuItems.style.maxHeight = "0px";
+
+        function MenuToggle(){
+            if( menuItems.style.maxHeight == "0px"){
+                menuItems.style.maxHeight = "200px";
+            }
+            else{
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+    <!-- ------- JS for form toggle ------ -->
+    <script>
+        var LoginForm = document.getElementById("login-form");
+        var RegisterForm = document.getElementById("register-form");
+        var Indicator = document.getElementById("indicator");
+
+            function register(){
+                RegisterForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)";
+            }
+            function login(){
+                RegisterForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)";
+            }
+    </script>
+
+
+    <!-- ----- Script for login form ------ -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxuwnQg9XYS65otSOE21czdlrDtSqoav_7ttnrrTNdkq1PeU-UEnxinzxpvDddPQqlB/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+       <!-- ----- Script for register form ------ -->
+    <script>
+        const scriptURL2 = 'https://script.google.com/macros/s/AKfycbzsii9IvcO0QAJyupnkVyAFH8L-1GZ-yvaXd-qX1u1HjU2kK5Y4yZaQ5tyLusM5-8O9Lg/exec'
+        const form2 = document.forms['submit-to-register-form']
+      
+        form2.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+
+</body>
+</html>

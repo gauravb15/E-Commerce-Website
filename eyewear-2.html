@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GB-Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="gb.png" alt="logo">
+                    </a>
+                </div>
+
+                <nav>
+                    <ul id="menu-items">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="allproducts.html">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <div class="cart-menu">
+                    <!-- <img src="images/cart-icon.png" alt="img" class="cart-icon" height="30px" width="30px"> -->
+                    <img src="images/menu-icon.png" alt="img" class="menu-icon" onclick="MenuToggle()">
+                </div>
+            </div>   
+        </div>
+    </div>
+
+
+    <!-- --------Single Product Details-------- -->
+
+    <div class="small-container product-details">
+        <div class="row">
+            <div class="col-2">
+                <img src="product_images/e-2-1.jpg" alt="img" id="large-img" width="100%">
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="product_images/e-2-2.jpg" alt="img" class="small-img" width="100%">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="product_images/e-2-3.jpg" alt="img" class="small-img" width="100%">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="product_images/e-2-4.jpg" alt="img" class="small-img" width="100%">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="product_images/e-2-1.jpg" alt="img" class="small-img" width="100%">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <b>Lenskart Air</b>
+                <h3>Full Rim Cat Eye Eyeglasses</h3>
+                <p>Rs. 1599</p>
+                <select name="size" id="">
+                    <option value="">Select size</option>
+                    <option value="">S</option>
+                    <option value="">M</option>
+                    <option value="">L</option>
+                    <option value="">XL</option>
+                </select>
+                <input type="number" value="1">
+                <!-- <a href="cart.html" class="btn">Add To Cart</a> -->
+                <a href="billing.html" class="btn">Buy Now</a>
+                <h3>Product Details</h3>
+                <p>Brand Name
+                    Lenskart Air
+                    Product Type
+                    Eyeglasses
+                    Frame Type
+                    Full Rim
+                    Frame Shape
+                    Cat Eye
+                    Model No.
+                    LA E11824
+                    Frame Size
+                    Narrow
+                    Frame Width
+                    132 mm
+                    Frame Dimensions
+                    52-17-145
+                    Weight
+                    20 gm
+                    Weight Group
+                    Light
+                    
+                    </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------Related Products------ -->
+    <div class="small-container">
+        <div class="row" id="related-products">
+            <h2>Related Products</h2>
+        </div>
+    </div>
+
+
+    <div class="small-container">
+        <div class="row">     
+            <div class="col-4">
+                <img src="product_images/c-1-m-1.webp" alt="image">
+                <h4>Men Solid Quilted Jacket</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>Rs. 1299</p>
+            </div>
+            <div class="col-4">
+                <img src="product_images/c-2-m-1.webp" alt="image">
+                <h4>TSS Drop Cut T-Shirts</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <p>Rs. 699</p>
+            </div>
+            <div class="col-4">
+                <img src="images/singleprod2.webp" alt="image">
+                <h4>Hooded Neck T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>Rs. 299</p>
+            </div>
+            <div class="col-4">
+                <img src="product_images/c-3-1.webp" alt="image">
+                <h4>Oxford Shirt-Pink</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>Rs. 1399</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="allproducts.html" class="btn">&#8592; Back</a>
+
+    <!-- ------Footer------ -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download the app for Android and ios mobile.</p><br>
+                    <div class="app-logo">
+                        <img src="images/footer-playstore.png" alt="image">
+                        <img src="images/footer-appstore.png" alt="image">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="gb.png" alt="logo">
+                    <p>Aiming to provide best fashion <br> experiences to all at most <br> affordable prices from top brands</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>FAQs</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>You Tube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&#169; Copyright 2022 @ GB-Store. <br> All rights are reserved.</p>
+        </div>
+    </div>
+
+
+
+    <!-- JS for toggle menu -->
+    <script>
+        var menuItems = document.getElementById("menu-items");
+
+        menuItems.style.maxHeight = "0px";
+
+        function MenuToggle(){
+            if( menuItems.style.maxHeight == "0px"){
+                menuItems.style.maxHeight = "200px";
+            }
+            else{
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+<!-- --------JS for Product Gallery-------- -->
+    <script>
+        var LargeImg = document.getElementById("large-img");
+        var SmallImg = document.getElementsByClassName("small-img");
+
+        SmallImg[0].onclick = function()
+        {
+            LargeImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function()
+        {
+            LargeImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function()
+        {
+            LargeImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function()
+        {
+            LargeImg.src = SmallImg[3].src;
+        }
+
+    </script>
+
+</body>
+</html>
